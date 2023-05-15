@@ -1,0 +1,27 @@
+# Created by https://www.toptal.com/developers/gitignore/api/react,redis
+# Edit at https://www.toptal.com/developers/gitignore?templates=react,redis
+
+### react ###
+.DS_*
+*.log
+logs
+**/*.backup.*
+**/*.back.*
+
+node_modules
+bower_components
+
+*.sublime*
+
+psd
+thumb
+sketch
+
+### Redis ###
+# Ignore redis binary dump (dump.rdb) files
+
+*.rdb
+
+# End of https://www.toptal.com/developers/gitignore/api/react,redis
+
+.prettierrc

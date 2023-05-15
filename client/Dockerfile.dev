@@ -1,0 +1,17 @@
+# changed to avoid EACCES: permission denied, mkdir '/app/node_modules/.cache' error (https://www.udemy.com/course/docker-and-kubernetes-the-complete-guide/learn/lecture/11437304#questions/14297316)
+FROM node:16-alpine
+USER node
+RUN mkdir -p /home/node/app
+WORKDIR /home/node/app
+COPY --chown=node:node ./package.json ./
+RUN npm install
+COPY --chown=node:node ./ ./  
+CMD ["npm", "run", "start"]
+
+# before: 
+# FROM node:16-alpine
+# WORKDIR '/app'
+# COPY package.json .
+# RUN npm install
+# COPY . .
+# CMD ["npm", "run", "start"]
