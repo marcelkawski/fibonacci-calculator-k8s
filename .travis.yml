@@ -15,10 +15,10 @@ before_install:
   - gcloud config set compute/zone europe-central2-a
   - gcloud container clusters get-credentials fibonacci-calculator2-cluster
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker build -t marcelkawski/fibonacci-calculator2-react-test -f ./client/Dockerfile.dev ./client
+  - docker build -t mkawski/fibonacci-calculator2-react-test -f ./client/Dockerfile.dev ./client
 
 script:
-  - docker run -e CI=true marcelkawski/fibonacci-calculator2-react-test npm test
+  - docker run -e CI=true mkawski/fibonacci-calculator2-react-test npm test
 
 deploy:
   provider: script
