@@ -8,9 +8,9 @@ docker push mkawski/fib-calc-client:latest
 docker push mkawski/fib-calc-server:latest
 docker push mkawski/fib-calc-worker:latest
 
-docker push mkawski/$SHA
-docker push mkawski/$SHA
-docker push mkawski/$SHA
+docker push mkawski/fib-calc-client:$SHA
+docker push mkawski/fib-calc-server:$SHA
+docker push mkawski/fib-calc-worker:$SHA
 
 # apply configs
 kubectl apply -f k8s
