@@ -11,6 +11,7 @@ function App() {
         <header className="App-header">
           {/* <img src={logo} className="App-logo" alt="logo" /> */}
           <h1 className="App-title">Fibonacci Calculator 🖩</h1>
+          <h2>best calculator ever created</h2>
           <Link to="/otherpage">Other Page</Link>
           <div>
             <Route exact path="/" component={Fibonacci} />
